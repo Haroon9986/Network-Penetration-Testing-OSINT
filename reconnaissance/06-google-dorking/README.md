@@ -1,34 +1,42 @@
-# Google Dorking
-
-Passive OSINT research using search-engine queries to identify publicly indexed information.
+# 06 – Google Dorking
 
 ## Objective
 
-Identify publicly accessible documents and information that could contribute to an understanding of the organisation's public exposure.
+The objective of this stage was to identify publicly indexed information associated with the target domain using search-engine-based OSINT techniques.
 
-## Method
+## Methodology
 
-Google Dorking techniques were used to search for publicly indexed information.
+Google search operators were used to identify publicly accessible information indexed by search engines.
 
-The assessment included searches for:
+The searches included checks for:
 
 - Publicly indexed PDF documents
-- Potentially exposed password-related information
+- Password-related references
 - Directory listings
 - Configuration files
 
-No intrusive access or exploitation was performed.
+The activity was limited to publicly indexed search results. No restricted systems were accessed and no intrusive activity was performed.
 
-## Findings
+## Key Findings
 
-PDF documents relating to the organisation's services were identified through publicly indexed search results.
+The `filetype:pdf` search identified publicly accessible PDF documents associated with the organisation.
 
-The identified documents were not directly sensitive, although publicly available documents may provide information that could assist an attacker in developing an understanding of an organisation.
+The password-related search identified publicly indexed pages containing password-related references.
 
-Searches for directory listings and configuration files did not return results.
+Searches for directory listings and configuration files did not return relevant results.
 
-## Security Considerations
+No credentials or restricted files were accessed.
 
-Publicly indexed documents should be reviewed regularly to ensure that unnecessary or sensitive information is not exposed.
+## Security Relevance
 
-Organisations should also monitor publicly indexed content for accidental exposure of sensitive information or configuration data.
+Google Dorking can assist passive reconnaissance by identifying information that an organisation may have unintentionally made publicly searchable.
+
+Public documents and exposed information can potentially assist further reconnaissance or social-engineering attempts.
+
+## Evidence
+
+![Google Dorking PDF Search](figure-21-filetype-pdf.png)
+
+## Assessment
+
+The Google Dorking exercise demonstrated how search-engine operators can be used to identify publicly indexed information without directly interacting with the organisation's internal systems.
