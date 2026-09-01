@@ -1,43 +1,88 @@
-# 05 – Technology Stack
+# Network Penetration Testing – Passive OSINT Assessment
 
-## Objective
+A passive reconnaissance and Open-Source Intelligence (OSINT) security assessment conducted as part of my Network Penetration Testing studies.
 
-The objective of this stage was to identify publicly observable technologies and web infrastructure associated with the target website.
+The project demonstrates how publicly available information can be collected and analysed to understand an organisation's external digital footprint without performing intrusive scanning or exploitation.
+
+## Project Overview
+
+The assessment focused on six passive reconnaissance activities:
+
+1. [Public Website OSINT](reconnaissance/01-public-website-osint/README.md)
+2. [WHOIS Analysis](reconnaissance/02-whois/README.md)
+3. [DNS Analysis](reconnaissance/03-dns-analysis/README.md)
+4. [Certificate & Subdomain Analysis](reconnaissance/04-certificates-subdomains/README.md)
+5. [Technology Stack Analysis](reconnaissance/05-technology-stack/README.md)
+6. [Google Dorking](reconnaissance/06-google-dorking/README.md)
 
 ## Methodology
 
-Passive technology-stack reconnaissance was performed using Netcraft and HTTP response header analysis from Kali Linux.
+The assessment used publicly available information and passive reconnaissance techniques.
 
-The `curl` command was used to inspect publicly returned HTTP headers.
+Tools and techniques included:
 
-No intrusive scanning, exploitation or interaction with internal systems was performed.
+- Kali Linux
+- WHOIS
+- DNS analysis using `dig`
+- Certificate Transparency / crt.sh
+- Netcraft
+- HTTP header analysis using `curl`
+- Google search operators
+
+No exploitation, vulnerability scanning or unauthorised access was performed.
 
 ## Key Findings
 
-The analysis identified publicly observable information including:
+The assessment identified publicly observable information relating to:
 
-- nginx web server information
-- HTTP/2 support
-- HTTP response headers
-- Publicly observable website infrastructure information
+- Public website and business information
+- Domain registration information
+- DNS records
+- Certificate-associated hostnames
+- Web server and protocol information
+- Publicly indexed documents
 
-Netcraft was also reviewed to gather additional publicly available information about the website and its technology history.
+No direct vulnerability was identified during the passive reconnaissance activities.
 
-## Security Relevance
+The findings demonstrate how publicly available information can contribute to external reconnaissance and potential social-engineering risk when combined.
 
-Technology fingerprinting can provide useful information for passive reconnaissance by helping identify:
+## Security Considerations
 
-- Web server technologies
-- Supported protocols
-- Public-facing infrastructure
-- Technology patterns that could assist further reconnaissance
+The project highlights the importance of regularly reviewing an organisation's publicly available digital footprint.
 
-The information identified does not by itself represent a vulnerability.
+Organisations can reduce unnecessary exposure by:
 
-Evidence in figure 20 attached in this action alongisde readme.
+- Reviewing publicly indexed documents
+- Monitoring certificate and subdomain exposure
+- Limiting unnecessary infrastructure information
+- Reviewing DNS configuration
+- Regularly assessing publicly available information
 
+## Technologies & Tools
 
+| Category | Tools |
+|---|---|
+| Operating System | Kali Linux |
+| Reconnaissance | WHOIS, `dig`, crt.sh |
+| OSINT | Netcraft, Google Search |
+| Web Analysis | `curl`, HTTP headers |
+| Documentation | Markdown, Git, GitHub |
 
-## Assessment
+## Repository Structure
 
-The technology-stack analysis demonstrated how publicly observable web technologies and HTTP headers can be identified without intrusive interaction with the target infrastructure.
+```text
+Network-Penetration-Testing-OSINT/
+├── reconnaissance/
+│   ├── 01-public-website-osint/
+│   │   └── README.md
+│   ├── 02-whois/
+│   │   └── README.md
+│   ├── 03-dns-analysis/
+│   │   └── README.md
+│   ├── 04-certificates-subdomains/
+│   │   └── README.md
+│   ├── 05-technology-stack/
+│   │   └── README.md
+│   └── 06-google-dorking/
+│       └── README.md
+└── README.md
