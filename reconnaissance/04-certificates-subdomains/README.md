@@ -1,37 +1,44 @@
-# Certificate and Subdomain Checks
-
-Passive reconnaissance of publicly available certificate and subdomain information.
+# 04 – Certificates & Subdomains
 
 ## Objective
 
-Identify publicly accessible certificates, subdomains and hosts associated with the target organisation.
+The objective of this stage was to identify publicly available certificate and subdomain information associated with the target domain.
 
-## Method
+## Methodology
 
-Public certificate information was reviewed using crt.sh and browser-based searches.
+Certificate Transparency records were reviewed using crt.sh to identify certificates and publicly listed hostnames associated with the target domain.
 
-Searches were performed for the organisation's website, portals and login-related subdomains.
+Additional searches were performed to check for publicly indexed portal and login-related pages.
 
-No intrusive scanning or interaction with internal systems was performed.
+No intrusive scanning, exploitation or interaction with internal systems was performed.
 
-## Areas Reviewed
+## Key Findings
 
-- Public certificate records
-- Certificate-associated hostnames
-- Website subdomains
-- Portal-related hosts
-- Login-related hosts
+The certificate search identified publicly listed hostnames associated with the domain, including:
 
-## Findings
+- `www.cranberry.co.uk`
+- `blog.cranberry.co.uk`
+- `3cx.cranberry.co.uk`
 
-Public certificate information revealed organisation-related URLs and hostnames.
+The certificate records demonstrated how Certificate Transparency data can reveal externally visible hostnames.
 
-Searches for portal and login-related hosts did not return additional results.
+Additional searches for portal and login-related pages did not identify matching publicly indexed results.
 
-The assessment did not identify a directly exploitable vulnerability through the certificate and subdomain checks.
+## Security Relevance
 
-## Security Considerations
+Certificate Transparency information can assist passive reconnaissance by revealing:
 
-Public certificate and subdomain information can assist threat actors in mapping an organisation's external infrastructure.
+- Publicly listed hostnames
+- Subdomain naming patterns
+- External services
+- Information useful for mapping an organisation's public-facing infrastructure
 
-Regular monitoring of certificates and externally visible subdomains can help identify unexpected or outdated infrastructure.
+No direct vulnerability was identified from the certificate information alone.
+
+## Evidence
+
+![Certificate Transparency Results](figure-14-certificates.png)
+
+## Assessment
+
+The certificate analysis demonstrated how publicly available Certificate Transparency records can contribute to external reconnaissance without directly interacting with the organisation's internal systems.
