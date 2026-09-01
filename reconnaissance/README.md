@@ -8,12 +8,12 @@ The project demonstrates how publicly available information can be collected and
 
 The assessment focused on six passive reconnaissance activities:
 
-1. [Public Website OSINT](reconnaissance/01-public-website-osint/README.md)
-2. [WHOIS Analysis](reconnaissance/02-whois/README.md)
-3. [DNS Analysis](reconnaissance/03-dns-analysis/README.md)
-4. [Certificate & Subdomain Analysis](reconnaissance/04-certificates-subdomains/README.md)
-5. [Technology Stack Analysis](reconnaissance/05-technology-stack/README.md)
-6. [Google Dorking](reconnaissance/06-google-dorking/README.md)
+1. [Public Website OSINT](01-public-website-osint/README.md)
+2. [WHOIS Analysis](02-whois/README.md)
+3. [DNS Analysis](03-dns-analysis/README.md)
+4. [Certificate & Subdomain Analysis](04-certificates-subdomains/README.md)
+5. [Technology Stack Analysis](05-technology-stack/README.md)
+6. [Google Dorking](06-google-dorking/README.md)
 
 ## Methodology
 
@@ -71,7 +71,7 @@ Organisations can reduce unnecessary exposure by:
 ## Repository Structure
 
 ```text
-reconnaissance/
+Network-Penetration-Testing-OSINT/
 ├── 01-public-website-osint/
 │   └── README.md
 ├── 02-whois/
