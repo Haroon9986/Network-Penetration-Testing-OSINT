@@ -34,9 +34,7 @@ Technology fingerprinting can provide useful information for passive reconnaissa
 
 The information identified does not by itself represent a vulnerability.
 
-## Evidence
 
-![HTTP Header Analysis](figure-20-kali-headers.png)
 
 ## Assessment
 
