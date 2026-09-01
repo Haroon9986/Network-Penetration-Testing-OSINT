@@ -1,31 +1,45 @@
-# WHOIS Reconnaissance
-
-Passive reconnaissance using publicly available WHOIS registration information.
+# 02 – WHOIS Analysis
 
 ## Objective
 
-Identify publicly available domain registration information that could contribute to an understanding of the target organisation's infrastructure and online presence.
+The objective of this stage was to gather publicly available domain registration information using passive WHOIS reconnaissance.
 
-## Method
+## Methodology
 
-WHOIS information was reviewed using Kali Linux without interacting with the organisation's internal systems.
+WHOIS information was reviewed using Kali Linux to identify publicly available domain registration and infrastructure information.
 
-The assessment examined publicly available registration and domain information.
+No intrusive scanning, exploitation or interaction with internal systems was performed.
 
-## Findings
+## Key Findings
 
-The assessment identified information including:
+The WHOIS lookup identified:
 
-- Domain registration details
+- Domain: `cranberry.co.uk`
+- Registrar: FastHosts Internet Ltd
+- Registration date: 17 April 2003
+- Expiry date: 17 April 2027
+- Last updated: 18 March 2025
+- Publicly listed name server information
+- No personal registrant information was identified in the retrieved results
+
+## Security Relevance
+
+WHOIS information can assist with passive reconnaissance by providing information about:
+
+- Domain ownership and registration history
 - Registrar information
-- Domain registration and expiry dates
-- Last updated information
-- Name server information
+- Domain lifecycle dates
+- Publicly listed name servers
+- External infrastructure
 
-No personal information was identified during the assessment.
+Although no direct vulnerability was identified, publicly available registration information can contribute to wider reconnaissance and social-engineering risk when combined with other OSINT sources.
 
-## Security Considerations
+## Evidence
 
-Publicly available registration information can contribute to an attacker's reconnaissance and may assist social engineering or infrastructure profiling.
+![WHOIS Analysis](whois-analysis.png)
 
-Regular monitoring of domain registration information and ensuring timely domain renewal can help reduce associated risks.
+## Assessment
+
+The WHOIS lookup demonstrated how publicly available domain registration information can be collected without directly interacting with the organisation's internal systems.
+
+The findings were used as part of the wider passive reconnaissance assessment.
