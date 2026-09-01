@@ -1,41 +1,68 @@
-# DNS Analysis
-
-Passive analysis of publicly available DNS records associated with the target organisation.
+# 03 – DNS Analysis
 
 ## Objective
 
-Review publicly accessible DNS information to identify infrastructure and email-related information that could contribute to reconnaissance.
+The objective of this stage was to identify publicly available DNS information associated with the target domain using passive DNS reconnaissance.
 
-## Method
+## Methodology
 
-DNS information was collected using the `dig` command in Kali Linux.
+DNS records were queried using `dig` in Kali Linux.
 
-The assessment reviewed publicly available DNS records without interacting with internal systems.
-
-## Records Reviewed
+The following record types were examined:
 
 - A records
 - MX records
 - TXT records
 - NS records
 
-## Findings
+No intrusive scanning, exploitation or interaction with internal systems was performed.
 
-The DNS analysis identified publicly available information relating to:
+## Key Findings
 
-- The organisation's public IP address
-- Mail exchange infrastructure
-- Name servers
-- TXT records containing verification information
+### A Record
 
-The MX records indicated the use of Outlook mail protection.
+The A record identified a publicly resolvable IPv4 address associated with the domain.
 
-No sensitive information was identified during the DNS queries.
+### MX Record
 
-## Security Considerations
+The MX record indicated that email services were hosted through Microsoft Outlook/Microsoft 365 infrastructure.
 
-Public DNS information can assist threat actors in understanding an organisation's infrastructure.
+### TXT Record
 
-Information such as public IP addresses, mail servers and name servers may contribute to reconnaissance and could be used when planning future attacks.
+TXT records contained publicly visible domain verification and email-security information.
 
-Regular review of externally visible DNS records can help organisations identify unnecessary or unexpected information.
+No sensitive credentials or passwords were identified.
+
+### NS Record
+
+The NS lookup identified publicly available authoritative name server information for the domain.
+
+## Security Relevance
+
+Public DNS information can assist passive reconnaissance by revealing:
+
+- Publicly resolvable infrastructure
+- Email service providers
+- Authoritative name servers
+- Domain verification information
+- Information useful for external infrastructure mapping
+
+Individually, these records do not represent a vulnerability. However, DNS information can contribute to broader reconnaissance when combined with other publicly available OSINT.
+
+## Evidence
+
+### A Record
+
+![A Record](figure-10-a-record.png)
+
+### MX Record
+
+![MX Record](figure-11-mx-record.png)
+
+### NS Record
+
+![NS Record](figure-13-ns-record.png)
+
+## Assessment
+
+The DNS analysis demonstrated how publicly accessible DNS records can provide useful information about an organisation's external infrastructure without requiring intrusive interaction with its systems.
