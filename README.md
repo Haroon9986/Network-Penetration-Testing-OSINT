@@ -34,6 +34,8 @@ Technology fingerprinting can provide useful information for passive reconnaissa
 
 The information identified does not by itself represent a vulnerability.
 
+Evidence in figure 20 attached in this action alongisde readme.
+
 
 
 ## Assessment
